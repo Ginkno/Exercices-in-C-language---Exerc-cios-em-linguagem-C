@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main(void) 
+{
+  
+  int quantidade, i, total_n = 0, soma_total = 0;
+  double media;
+
+  printf("Quanto numeros vc vai digitar: ");
+  scanf("%d", &quantidade);
+
+  int vet[quantidade];
+
+  for (i = 0; i < quantidade; i++) {
+    printf("Digite um numero: ");
+    scanf("%d", &vet[i]);
+    total_n++;
+    soma_total += vet[i];
+  }
+
+  media = (double) soma_total / total_n;
+
+  printf("\nSOMA TOTAL: %d\n", soma_total);
+  printf("MEDIA: %.2lf", media);
+
+}
