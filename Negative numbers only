@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+void digitanumero() 
+{
+ 
+ int quant, i;
+
+  printf("Quantos numeros voce vai digitar? ");
+  scanf("%d", &quant);
+
+  int vet[quant];
+
+  if (quant > 10) {
+    printf("O numero não poder ser maior que 10\n");
+    digitanumero();
+  } 
+  else 
+  {
+    for (i = 0; i < quant; i++) {
+      printf("Digite um numero: ");
+      scanf("%d", &vet[i]);
+    }
+  }
+
+  printf("\nNUMEROS NEGATIVOS:\n");
+  for (i = 0; i < quant; i++) {
+    if (vet[i] < 0) {
+      printf("%d\n", vet[i]);
+    }
+  }
+
+}
+
+
+int main(void) 
+{
+  digitanumero();
+
+  char resp;
+  
+  do 
+  {
+    printf("Deseja prosseguir (S/N)? ");
+    scanf("%s", &resp);
+    
+    digitanumero();
+
+  } while (resp == 'S');
+    
+}
