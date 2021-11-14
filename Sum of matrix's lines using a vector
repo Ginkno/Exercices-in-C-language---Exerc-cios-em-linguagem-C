@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+int main(void) 
+{
+  
+  int M, N;
+
+  printf("Type the numbers of matrix's lines: ");
+  scanf("%d", &M);
+  printf("Type the number of the matrix's columns: ");
+  scanf("%d", &N);
+
+  int mat[M][N];
+  int vet[M];
+
+  for (int i = 0; i < M; i++) {
+    printf("Digite os numeros da %da line: \n", i + 1);  // receive the user's input about the element that will go inside each line
+    for (int j = 0; j < N; j++) {
+      scanf("%d", &mat[i][j]);
+    }
+  }
+
+  for (int i = 0; i < M; i++) {   // the vector vet receive each value of the matrix elements and sum them up
+    vet[i] = 0;
+    for (int j = 0; j < N; j++) {
+      vet[i] = vet[i] + mat[i][j];
+    }
+  }
+
+  printf("VETOR GERADO: \n");    // print the sum's result of each line of the matrix on the console
+  for (int i = 0; i < M; i++) {
+    printf("%d\n", vet[i]);
+  }
+}
