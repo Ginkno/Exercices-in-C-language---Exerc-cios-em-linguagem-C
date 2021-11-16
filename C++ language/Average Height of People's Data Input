@@ -1,0 +1,44 @@
+#include <iostream>
+#include <iomanip>
+#include <climits>
+#include <cmath>
+
+using namespace std;
+
+int main() 
+{
+  int N;
+
+  cout << "How many people will be included? ";
+  cin >> N;
+
+  string names[N], u16names[N];
+  int ages[N], u16 = 0;
+  double heights[N], sumHeights = 0;
+
+  for (int i = 0; i < N; i++) {
+    cout << "\nName: ";
+    cin >> names[i];
+    cout << "Age: ";
+    cin >> ages[i];
+    if (ages[i] < 16) {
+      u16++;
+    }
+    cout << "Height: ";
+    cin >> heights[i];
+    sumHeights += heights[i];
+    cout << "\n";
+  }
+
+  double mediaHeight = sumHeights / N, u16percent = (double) u16 / N;
+
+  
+  cout << "The average heights is " << mediaHeight << " and " << u16percent*100 << "% of the people listed here are under 16 years old." << endl;
+
+  for (int i =0; i < N; i++) {
+    if (ages[i] < 16) {
+      cout << " - " << names[i] << endl;
+    }
+  }
+
+} 
