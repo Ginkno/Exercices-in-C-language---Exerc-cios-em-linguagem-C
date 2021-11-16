@@ -1,0 +1,31 @@
+#include <iostream>
+#include <iomanip>
+#include <climits>
+#include <cmath>
+
+using namespace std;
+
+int main() 
+{
+  int a, b;
+
+  do {
+  cout << "Type two numbers" << endl;
+  cout << "First: ";
+  cin >> a;
+  cout << "Second: ";
+  cin >> b;
+
+  if (a < b) {
+    cout << "ASCENDING!" << endl;
+  } else if (a > b) {
+    cout << "DESCENDING!" << endl;
+  } else {
+    cout << "EQUAL" << endl;
+  }
+
+  } while (a != b);
+
+  cout << "That's it! Bye" << endl;
+
+} 
