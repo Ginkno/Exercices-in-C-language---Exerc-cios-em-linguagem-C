@@ -1,0 +1,23 @@
+#include <iostream>
+#include <iomanip>
+#include <climits>
+#include <cmath>
+
+using namespace std;
+
+int main() 
+{
+  int number;
+
+  cout << "For what number do you want a time table? ";
+  cin >> number;
+
+  int i = 0;
+
+  do {
+    cout << number << " * " << i << " = " << number * i << "\n";
+    i++;
+  } while (i != 10);
+
+  return 0;
+} 
