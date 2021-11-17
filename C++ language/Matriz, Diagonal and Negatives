@@ -1,0 +1,38 @@
+#include <iostream>
+#include <iomanip>
+#include <climits>
+#include <cmath>
+
+using namespace std;
+
+int main() 
+{
+  int size;
+
+  cout << "Type the square matrix's size: ";
+  cin >> size;
+
+  int mat[size][size], countneg = 0;
+  int negatives[countneg][countneg], maindiag[size];
+
+  for (int i = 0; i < size; i++) {
+    for (int j = 0; j < size; j++) {
+      cout << "Element["<< i <<"]["<< j <<"]: ";
+      cin >> mat[i][j];
+      if (i == j) {
+        maindiag[i] = mat[i][j];
+      } 
+      if (mat[i][j] < 0) {
+        countneg++; 
+      }
+    }
+  }
+  
+  cout << "MAIN DIAGONAL" << endl;
+  for (int i = 0; i < size; i++) {
+    cout << maindiag[i] << " ";
+  }
+
+  cout << "\nNegative Numbers" << endl;
+  cout << "The amount of negative numbers is " << countneg;
+} 
