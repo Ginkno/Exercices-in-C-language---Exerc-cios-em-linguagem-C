@@ -1,0 +1,29 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Locale.setDefault(Locale.US);
+    Scanner sc = new Scanner(System.in);
+
+    double fgrade, sgrade, sum;
+
+    System.out.print("Type the first grade: ");
+    fgrade = sc.nextDouble();
+    System.out.print("Type the second grande: ");
+    sgrade = sc.nextDouble();
+
+    sum = fgrade + sgrade;
+
+    if (sum < 60.00) {
+      System.out.println("Final Grade = " + sum);
+      System.out.print("Failed the test.");
+    } else {
+      System.out.println("Final Grade = " + sum);
+      System.out.print("Congrats!");
+    }
+
+    sc.close();
+  }
+}
