@@ -1,0 +1,32 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Locale.setDefault(Locale.US);
+    Scanner sc = new Scanner(System.in);
+
+    int a, b, c, smallest;
+
+    System.out.print("First Number: ");
+    a = sc.nextInt();
+    System.out.print("Second Number: ");
+    b = sc.nextInt();
+    System.out.print("Third Number: ");
+    c = sc.nextInt();
+
+    if (a < b && a < c) {
+      smallest = a;
+    } else if (b < a && b < c) {
+      smallest = b;
+    } else {
+      smallest = c;
+    }
+
+    System.out.println();
+    System.out.print("The smallest number is: " + smallest);
+
+    sc.close();
+  }
+}
