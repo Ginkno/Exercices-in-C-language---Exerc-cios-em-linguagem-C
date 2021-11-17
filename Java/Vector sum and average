@@ -1,0 +1,34 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+class Main {
+  public static void main(String[] args) {
+    
+    Locale.setDefault(Locale.US);
+    Scanner sc = new Scanner(System.in);
+
+    int amount, sum = 0, average;
+
+    System.out.print("How many numbers? ");
+    amount = sc.nextInt();
+
+    int[] vet = new int[amount];
+
+    for (int i = 0; i < amount; i++) {
+      System.out.print("Type a number: ");
+      vet[i] = sc.nextInt();
+      sum += vet[i];
+    }
+
+    average = sum / amount;
+
+    System.out.print("VECTOR = "); 
+    for (int i = 0; i < amount; i++) {
+      System.out.print(vet[i] + " ");
+    }
+    System.out.println();
+    System.out.println("SUM = " + sum);
+    System.out.print("Average = " + average);
+    
+  }
+}
