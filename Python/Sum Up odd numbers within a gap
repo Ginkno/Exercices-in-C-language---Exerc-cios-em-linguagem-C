@@ -1,0 +1,20 @@
+a: int; b: int; soma: int; i: int;
+
+print("Type two numbers: ")
+a = int(input("Number 1 = "))
+b = int(input("Number 2 = "))
+
+if a > b:
+  troca = a
+  a = b
+  b = troca
+
+soma = 0
+i = a
+
+for i in range (a+1, b):
+  if i % 2 != 0:
+    soma += i
+  i+1
+
+print("Odd numbers sum up: {:d}".format(soma))
