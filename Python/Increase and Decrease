@@ -1,0 +1,18 @@
+a: float; b: float;
+a = 0
+b = 1
+
+while a != b:
+
+  print("Digite dois numeros: ")
+  a = int(input("numero 1 = "))
+  b = int(input("numero 2 = "))
+
+  if (a < b):
+    print("Crescente")
+  elif (a > b):
+    print("Decrescente")
+  else:
+    break
+
+print("Iguais. Fim do Programa")
