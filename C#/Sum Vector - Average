@@ -1,0 +1,37 @@
+using System;
+using System.Globalization;
+
+class Program {
+  public static void Main (string[] args) {
+    
+    CultureInfo CI = CultureInfo.InvariantCulture;
+    
+    int N, sum = 0;
+    double media;
+
+    Console.WriteLine("Size of the vector: ");
+    N = int.Parse(Console.ReadLine());
+
+    int[] vet = new int[N];
+
+    for (int i = 0; i < N; i++) {
+      Console.Write("Type a number = ");
+      vet[i] = int.Parse(Console.ReadLine());
+      sum += vet[i];
+    }
+
+    media = (double) sum / N;
+
+    Console.WriteLine();
+    Console.Write("VECTOR = ");
+    for (int i = 0; i < N; i++) {
+      Console.Write(vet[i] + " ");
+    } 
+
+    Console.WriteLine();
+    Console.WriteLine("SUM = " + sum);
+    Console.WriteLine("MEDIA = " + media.ToString("F2",CI));
+
+
+  }
+}
