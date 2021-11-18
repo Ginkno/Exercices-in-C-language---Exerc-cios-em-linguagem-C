@@ -1,0 +1,12 @@
+base: float; altura: float; area: float; perimetro: float; diagonal: float;
+
+base = float(input("Digite um valor para a base = "))
+altura = float(input("Digite um valor para altura = "))
+
+area = base * altura
+perimetro = 2 * (base + altura)
+diagonal = (base**2 + altura**2)**0.5
+
+print("AREA = ", area)
+print("PERIMETRO = ", perimetro)
+print("DIAGONAL = ", "{:.3f}".format(diagonal))
