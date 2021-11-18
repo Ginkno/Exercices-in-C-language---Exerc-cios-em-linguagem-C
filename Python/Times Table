@@ -1,0 +1,12 @@
+n: int; newn: str;
+newn = "S";
+
+while newn != "N":
+  n = int(input("For which number do you want a times table? "))
+
+  for i in range(0, 10):
+    print("{:d} * {:d} = {:d}".format(i, n, n * i))
+
+  newn = str(input("Do you a want a new number? (S/N) = "))
+
+print("End of Program")
