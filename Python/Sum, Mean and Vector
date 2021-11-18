@@ -1,0 +1,22 @@
+from numpy import ndarray
+
+N: int; soma: float; media: float; vet: float;
+
+N = int(input("Qual o tamanho do vetor: "))
+vet = ndarray(N)
+
+for i in range(0, N):
+  vet[i] = float(input("Digite um numero: "))
+
+soma = 0
+N_float = float(N)
+
+for i in range(0, N):
+  print(vet[i], end=" ")
+  soma += vet[i]
+
+media = soma / N_float
+
+print()
+print("SOMA = ", soma)
+print("MEDIA = {:.2f}".format(media))
