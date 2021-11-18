@@ -1,0 +1,24 @@
+using System;
+using System.Globalization;
+
+class Program {
+  public static void Main (string[] args) {
+
+    int x, y;
+
+    Console.Write("Digite dois numeros: ");
+    x = int.Parse(Console.ReadLine());
+    y = int.Parse(Console.ReadLine());
+
+    if (x < y)
+    {
+        Console.Write("Ascending!");
+    } else if (x > y)
+    {
+        Console.Write("Descending!");
+    } else
+    {
+        Console.Write("Equal. That's it");
+        
+  }
+}
