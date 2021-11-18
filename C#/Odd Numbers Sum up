@@ -1,0 +1,32 @@
+using System;
+using System.Globalization;
+
+class Program {
+  public static void Main (string[] args) {
+
+    int z, w;
+
+    Console.Write("Digite dois numeros: ");
+    z = int.Parse(Console.ReadLine());
+    w = int.Parse(Console.ReadLine());
+
+    if (z > w)
+    {
+        int troca = z;
+        z = w;
+        w = troca;
+    }
+
+    int soma = 0;
+
+    for (int i = z + 1; i < w; i++)
+    {
+        if (i % 2 != 0)
+        {
+            soma += i;
+        }
+    }
+
+    Console.WriteLine("Os numeros impares somam = " + soma);
+  }
+}
