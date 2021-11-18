@@ -1,0 +1,13 @@
+idade1: int; idade2: int; nome1: str; nome2: str;
+media: float;
+
+print("Digite os dados da primeira pessoa: ")
+nome1 = str(input("Nome: "))
+idade1 = int(input("Idade: "))
+print("Digite os dados da segunda pessoa: ")
+nome2 = str(input("Nome: "))
+idade2 = int(input("Idade: "))
+
+media = (float) (idade1 + idade2) / 2;
+
+print("A media de idade de {:s} e {:s} é de {:.3f}".format(nome1, nome2, media))
