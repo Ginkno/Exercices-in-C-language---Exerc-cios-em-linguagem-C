@@ -1,0 +1,15 @@
+a: int; b: int; c: int; menor: int;
+
+print("Digite tres numeros: ")
+a = int(input("Digite o primeiro: "))
+b = int(input("Digite o segundo: "))
+c = int(input("Digite o terceiro: "))
+
+if a < b and a < c:
+  menor = a
+elif b < a and b < c:
+  menor = b
+else:
+  menor = c
+
+print("O menor valor é {:d}".format(menor))
